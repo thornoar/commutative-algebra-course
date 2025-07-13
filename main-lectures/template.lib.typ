@@ -8,8 +8,10 @@
 #let pp = math.frak([p])
 #let mm = math.frak([m])
 #let hh = h(.5em)
-#let gen(it) = $angle.l it angle.r$
+#let gen(it) = $lr(angle.l it angle.r)$
 #let div = $#h(1mm)op(dots.v)#h(1mm)$
+#let coker = math.op([coker], limits: false)
+#let supp = math.op([supp], limits: false)
 
 #let formatting = doc => {
   set page("a4", margin: 0.5in, numbering: "1")

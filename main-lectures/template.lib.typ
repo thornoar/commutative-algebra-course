@@ -34,6 +34,8 @@
   }
   set outline(indent: auto)
 
+  // show math.equation: box
+
   doc
 }
 

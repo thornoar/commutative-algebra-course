@@ -12,6 +12,7 @@
 #let div = $#h(1mm)op(dots.v)#h(1mm)$
 #let coker = math.op([coker], limits: false)
 #let supp = math.op([supp], limits: false)
+#let ot = math.times.circle
 
 #let formatting = doc => {
   set page("a4", margin: 0.5in, numbering: "1")

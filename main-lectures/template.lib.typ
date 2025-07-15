@@ -47,6 +47,23 @@
   #text(14pt)[_Коммутативная алгебра, 2025_]
 ]
 
+#let problem-weights = (
+  (cost: 3, dur: 2),
+  (cost: 5, dur: 3),
+  (cost: 5, dur: 3),
+  (cost: 5, dur: 4),
+  (cost: 5, dur: 4),
+  (cost: 7, dur: 6),
+  (cost: 7, dur: 7),
+  (cost: 7, dur: 9),
+  (cost: 11, dur: 12),
+)
+
+#let info(n) = [
+  #h(1fr)
+  _(*#problem-weights.at(n - 1).at("cost")* кг., годно в теч. *#problem-weights.at(n - 1).at("dur")* дней)_
+]
+
 #let problemlist(title) = doc => {
   show: formatting
   set page(background: image(
@@ -55,7 +72,13 @@
     height: 100%,
     fit: "stretch"
   ))
-  set enum(numbering: n => [ #n. ])
+  set enum(numbering: n => [
+    #h(-6mm)
+    _(#problem-weights.at(n - 1).at("cost"),
+      #problem-weights.at(n - 1).at("dur"))_
+    #h(1mm)
+    *#n.*
+  ])
 
   head([ #title ])
   doc

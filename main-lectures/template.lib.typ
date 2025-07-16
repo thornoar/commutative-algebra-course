@@ -53,10 +53,29 @@
   (cost: 5, dur: 3),
   (cost: 5, dur: 4),
   (cost: 5, dur: 4),
+  (cost: 3, dur: 5),
   (cost: 7, dur: 6),
   (cost: 7, dur: 7),
   (cost: 7, dur: 9),
   (cost: 11, dur: 12),
+  (cost: 3, dur: 12),
+  (cost: 5, dur: 13),
+  (cost: 7, dur: 13),
+  (cost: 7, dur: 14),
+  (cost: 3, dur: 15),
+  (cost: 5, dur: 15),
+  (cost: 7, dur: 16),
+  (cost: 11, dur: 17),
+  (cost: 11, dur: 17),
+  (cost: 9, dur: 17),
+)
+
+#let hint(content) = box(
+  stroke: 0.5pt,
+  width: 100%,
+  inset: 0.25cm,
+  radius: 0.2cm,
+  content
 )
 
 #let info(n) = [
@@ -66,7 +85,7 @@
 
 #let problemlist(title) = doc => {
   show: formatting
-  set page(background: image(
+  set page(numbering: none, background: image(
     "pictures/troubles-faded.jpg",
     width: 100%,
     height: 100%,
